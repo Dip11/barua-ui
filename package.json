@@ -1,0 +1,21 @@
+{
+  "name": "barua-ui",
+  "private": true,
+  "packageManager": "pnpm@9.1.2",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev --filter=@my-ui/react-components",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "format": "turbo format",
+    "format:fix": "turbo format:fix"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "turbo": "^2.3.4"
+  }
+}
