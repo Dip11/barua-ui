@@ -1,0 +1,126 @@
+/* ─────────────────────────────────────────────────────────────────────
+ * Tokens — three-layer taxonomy: primitives → semantic → (component)
+ *
+ *   1. PRIMITIVES — raw values, no opinion
+ *   2. SEMANTIC   — role aliases that the rest of the codebase reads
+ *   3. COMPONENT  — per-component knobs (added later, on demand)
+ *
+ * We only include the tokens the Button needs right now. The file
+ * grows as we add more components. Light mode only for now;
+ * dark mode is one extra override block away when we want it.
+ * ────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap');
+
+:root {
+  /* ── 1. PRIMITIVES ───────────────────────────────────────────────── */
+
+  /* Neutral — cool grey with a faint indigo cast. Only the steps we use. */
+  --neutral-2:  #f5f3f8;   /* subtle bg */
+  --neutral-3:  #eeebf2;   /* muted bg */
+  --neutral-4:  #e5e1eb;   /* muted hover */
+  --neutral-8:  #8e8aa2;   /* strong border */
+  --neutral-12: #1c1a28;   /* default text */
+
+  /* Accent — indigo. Three steps for the bg / hover / active triplet. */
+  --accent-9:  #4c0fc8;
+  --accent-10: #4308b3;
+  --accent-11: #3e0a9c;
+
+  /* Danger — a solid + two darker shades for hover/active */
+  --danger-solid:     #c63425;
+  --danger-hover-px:  #b62c1f;
+  --danger-active-px: #a02418;
+
+  /* Type ramp — root font-size is the browser default (16 px) */
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --text-sm:   0.781rem;  --leading-sm:   1.125rem;
+  --text-base: 0.844rem;  --leading-base: 1.25rem;
+  --text-md:   0.938rem;  --leading-md:   1.375rem;
+
+  /* Radius — small for sm size, medium for md/lg */
+  --radius-sm: 0.313rem;
+  --radius-md: 0.438rem;
+
+  /* ── 2. SEMANTIC ────────────────────────────────────────────────── */
+
+  --bg-surface:     #ffffff;
+  --bg-subtle:      var(--neutral-2);
+  --bg-muted:       var(--neutral-3);
+  --bg-muted-hover: var(--neutral-4);
+
+  --fg-default:   var(--neutral-12);
+  --fg-on-accent: #ffffff;
+
+  --border-strong: var(--neutral-8);
+
+  --accent-bg:        var(--accent-9);
+  --accent-bg-hover:  var(--accent-10);
+  --accent-bg-active: var(--accent-11);
+
+  --danger-bg:        var(--danger-solid);
+  --danger-bg-hover:  var(--danger-hover-px);
+  --danger-bg-active: var(--danger-active-px);
+
+  --focus-outline: var(--accent-9);
+}
+
+/* ── 3. Bridge tokens into Tailwind's utility namespace ──────────────
+ * `@theme inline` registers our CSS variables for utility generation
+ * WITHOUT emitting duplicate custom properties. Tailwind learns the
+ * names; the runtime keeps using the originals from :root.
+ * ───────────────────────────────────────────────────────────────── */
+@theme inline {
+  /* surface */
+  --color-surface:     var(--bg-surface);
+  --color-subtle:      var(--bg-subtle);
+  --color-muted:       var(--bg-muted);
+  --color-muted-hover: var(--bg-muted-hover);
+
+  /* text */
+  --color-default:   var(--fg-default);
+  --color-on-accent: var(--fg-on-accent);
+
+  /* border */
+  --color-border-strong: var(--border-strong);
+
+  /* accent */
+  --color-accent:        var(--accent-bg);
+  --color-accent-hover:  var(--accent-bg-hover);
+  --color-accent-active: var(--accent-bg-active);
+
+  /* danger */
+  --color-danger:        var(--danger-bg);
+  --color-danger-hover:  var(--danger-bg-hover);
+  --color-danger-active: var(--danger-bg-active);
+
+  /* focus ring */
+  --color-ring: var(--focus-outline);
+
+  /* font */
+  --font-sans: var(--font-sans);
+
+  /* type ramp — Tailwind pairs size + line-height when keys match */
+  --text-sm:   var(--text-sm);    --text-sm--line-height:   var(--leading-sm);
+  --text-base: var(--text-base);  --text-base--line-height: var(--leading-base);
+  --text-md:   var(--text-md);    --text-md--line-height:   var(--leading-md);
+
+  /* spacing — Tailwind multiplies this base for p-1, p-2, etc. */
+  --spacing: 0.25rem;
+
+  /* radius */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+}
+
+/* Base reset — apply tokens to the document */
+html, body {
+  margin: 0;
+  background: var(--bg-surface);
+  color: var(--fg-default);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
