@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# build outputs
+dist/
+storybook-static/
+
+# turbo cache
+.turbo/
+
+# logs
+*.log
+npm-debug.log*
+
+# environment files
+.env
+.env.local
+.env.*.local
+
+# editor folders
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# OS files
+.DS_Store
+Thumbs.db
