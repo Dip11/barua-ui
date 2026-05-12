@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev --filter=@my-ui/react-components",
+    "dev": "turbo dev --filter=@barua-ui/react-components",
     "test": "turbo test",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
