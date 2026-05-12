@@ -12,6 +12,24 @@ A React component library built on [React Aria Components](https://react-spectru
 | `@repo/eslint-config` | Shared ESLint flat config (React + TypeScript + Prettier) |
 | `@repo/typescript-config` | Shared TypeScript presets (`base.json`, `vite.json`) |
 
+## Components
+
+Built one component at a time, starting with simple primitives and growing from there.
+
+| Component | Status |
+| --- | --- |
+| Button | ✅ Implemented |
+| Text | 🚧 In progress |
+| Textarea | 📋 Planned (next) |
+| Input / TextField | 📋 Planned |
+| Label | 📋 Planned |
+| Checkbox | 📋 Planned |
+| Radio | 📋 Planned |
+| Switch | 📋 Planned |
+| Link | 📋 Planned |
+
+Legend: ✅ shipped · 🚧 in progress · 📋 planned
+
 ## Tech stack
 
 - **Monorepo** — pnpm workspaces + Turborepo
