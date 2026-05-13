@@ -4,8 +4,37 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "sideEffects": ["**/*.css"],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./dist/*/index.d.ts",
+        "default": "./dist/*/index.js"
+      },
+      "require": {
+        "types": "./dist/*/index.d.cts",
+        "default": "./dist/*/index.cjs"
+      }
+    },
+    "./tailwind.css": "./dist/tailwind.css"
+  },
   "scripts": {
     "dev": "storybook dev -p 6006",
+    "build": "tsup",
     "test": "vitest",
     "lint": "eslint \"./src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint --fix \"./src/**/*.{ts,tsx}\"",
@@ -29,27 +58,28 @@
     "tailwindcss-react-aria-components": "^2.1.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^4",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@storybook/addon-a11y": "^10.3.6",
+    "@storybook/addon-docs": "9.1.20",
+    "@storybook/addon-onboarding": "9.1.20",
+    "@storybook/addon-vitest": "^10.3.6",
+    "@storybook/react-vite": "9.1.20",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^25.7.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/browser-playwright": "4.1.6",
+    "@vitest/coverage-v8": "4.1.6",
+    "eslint-plugin-storybook": "9.1.20",
     "jsdom": "^29.1.1",
+    "playwright": "^1.60.0",
+    "storybook": "9.1.20",
+    "tsup": "^8.5.1",
     "typescript": "^6.0.3",
     "vite": "^8.0.12",
-    "vitest": "^4.1.6",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "storybook": "9.1.20",
-    "@storybook/react-vite": "9.1.20",
-    "@chromatic-com/storybook": "^4",
-    "@storybook/addon-docs": "9.1.20",
-    "@storybook/addon-onboarding": "9.1.20",
-    "eslint-plugin-storybook": "9.1.20",
-    "@storybook/addon-vitest": "^10.3.6",
-    "@storybook/addon-a11y": "^10.3.6",
-    "playwright": "^1.60.0",
-    "@vitest/browser-playwright": "4.1.6",
-    "@vitest/coverage-v8": "4.1.6"
+    "vitest": "^4.1.6"
   }
 }
