@@ -106,4 +106,4 @@ This project follows **Trunk-Based Development** — short-lived branches, frequ
 
 ## License
 
-TBD
+[MIT](./LICENSE) © Dipta Barua
