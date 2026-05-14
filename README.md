@@ -4,29 +4,35 @@ A React component library built on [React Aria Components](https://react-spectru
 
 > Status: early-stage. Public API is unstable and may change without notice.
 
+📖 **Live Storybook:** [https://6a05c2c6b1f0a302d375ce5b-yenwgrjamj.chromatic.com/](https://6a05c2c6b1f0a302d375ce5b-yenwgrjamj.chromatic.com/) — browse the latest components and stories published from `main` via Chromatic.
+
 ## Packages
 
-| Package | Description |
-| --- | --- |
-| [`@barua-ui/react-components`](./packages/react-components) | React component library — themed primitives with accessibility-first defaults |
-| `@repo/eslint-config` | Shared ESLint flat config (React + TypeScript + Prettier) |
-| `@repo/typescript-config` | Shared TypeScript presets (`base.json`, `vite.json`) |
+
+| Package                                                     | Description                                                                   |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `[@barua-ui/react-components](./packages/react-components)` | React component library — themed primitives with accessibility-first defaults |
+| `@repo/eslint-config`                                       | Shared ESLint flat config (React + TypeScript + Prettier)                     |
+| `@repo/typescript-config`                                   | Shared TypeScript presets (`base.json`, `vite.json`)                          |
+
 
 ## Components
 
 Built one component at a time, starting with simple primitives and growing from there.
 
-| Component | Status |
-| --- | --- |
-| Button | ✅ Implemented |
-| Text | 🚧 In progress |
-| Textarea | 📋 Planned (next) |
-| Input / TextField | 📋 Planned |
-| Label | 📋 Planned |
-| Checkbox | 📋 Planned |
-| Radio | 📋 Planned |
-| Switch | 📋 Planned |
-| Link | 📋 Planned |
+
+| Component         | Status            |
+| ----------------- | ----------------- |
+| Button            | ✅ Implemented     |
+| Text              | 🚧 In progress    |
+| Textarea          | 📋 Planned (next) |
+| Input / TextField | 📋 Planned        |
+| Label             | 📋 Planned        |
+| Checkbox          | 📋 Planned        |
+| Radio             | 📋 Planned        |
+| Switch            | 📋 Planned        |
+| Link              | 📋 Planned        |
+
 
 Legend: ✅ shipped · 🚧 in progress · 📋 planned
 
@@ -54,13 +60,15 @@ pnpm dev          # runs storybook for @barua-ui/react-components on :6006
 
 Run from the repo root — Turbo fans the task out across workspaces.
 
-| Script | What it does |
-| --- | --- |
-| `pnpm dev` | Start Storybook for the components package |
-| `pnpm build` | Build all packages |
-| `pnpm test` | Run the test suites (Vitest) |
-| `pnpm lint` / `pnpm lint:fix` | Lint with ESLint |
-| `pnpm format` / `pnpm format:fix` | Check / write with Prettier |
+
+| Script                            | What it does                               |
+| --------------------------------- | ------------------------------------------ |
+| `pnpm dev`                        | Start Storybook for the components package |
+| `pnpm build`                      | Build all packages                         |
+| `pnpm test`                       | Run the test suites (Vitest)               |
+| `pnpm lint` / `pnpm lint:fix`     | Lint with ESLint                           |
+| `pnpm format` / `pnpm format:fix` | Check / write with Prettier                |
+
 
 ## Project layout
 
@@ -82,7 +90,7 @@ Run from the repo root — Turbo fans the task out across workspaces.
 
 ## Design tokens
 
-Tokens live in [`packages/react-components/src/theme.css`](./packages/react-components/src/theme.css) and follow a three-layer taxonomy:
+Tokens live in `[packages/react-components/src/theme.css](./packages/react-components/src/theme.css)` and follow a three-layer taxonomy:
 
 1. **Primitives** — raw values (`--neutral-12`, `--accent-9`, …)
 2. **Semantic** — role aliases that swap in dark mode (`--fg-default`, `--accent-bg`, …)
