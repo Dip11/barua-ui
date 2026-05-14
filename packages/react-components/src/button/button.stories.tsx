@@ -30,6 +30,7 @@ const meta: Meta<typeof Button> = {
   export const Ghost: Story = { args: { variant: 'ghost' } }
   
   export const Small: Story = { args: { size: 'sm' } }
+  export const Medium: Story = { args: { size: 'md' } }
   export const Large: Story = { args: { size: 'lg' } }
   
   export const Disabled: Story = { args: { isDisabled: true } }
