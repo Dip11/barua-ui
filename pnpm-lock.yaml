@@ -43,14 +43,8 @@ importers:
 
   packages/react-components:
     dependencies:
-      '@tailwindcss/postcss':
-        specifier: ^4.3.0
-        version: 4.3.0
-      postcss:
-        specifier: ^8.5.14
-        version: 8.5.14
       react:
-        specifier: ^19.2.6
+        specifier: ^19.0.0
         version: 19.2.6
       react-aria:
         specifier: ^3.48.0
@@ -59,7 +53,7 @@ importers:
         specifier: ^1.17.0
         version: 1.17.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       react-dom:
-        specifier: ^19.2.6
+        specifier: ^19.0.0
         version: 19.2.6(react@19.2.6)
       react-stately:
         specifier: ^3.46.0
@@ -71,14 +65,8 @@ importers:
         specifier: ^3.2.2
         version: 3.2.2(tailwind-merge@3.6.0)(tailwindcss@4.3.0)
       tailwindcss:
-        specifier: ^4.3.0
+        specifier: ^4.0.0
         version: 4.3.0
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@4.3.0)
-      tailwindcss-react-aria-components:
-        specifier: ^2.1.0
-        version: 2.1.0(tailwindcss@4.3.0)
     devDependencies:
       '@chromatic-com/storybook':
         specifier: ^5.2.1
@@ -104,6 +92,9 @@ importers:
       '@storybook/react-vite':
         specifier: ^10.4.0
         version: 10.4.0(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(esbuild@0.27.7)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(rollup@4.60.3)(storybook@10.4.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@testing-library/dom@10.4.1)(@types/react@19.2.14)(prettier@3.8.3)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(typescript@6.0.3)(vite@8.0.12(@types/node@25.7.0)(esbuild@0.27.7)(jiti@2.7.0))
+      '@tailwindcss/postcss':
+        specifier: ^4.3.0
+        version: 4.3.0
       '@testing-library/react':
         specifier: ^16.3.2
         version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -137,9 +128,18 @@ importers:
       playwright:
         specifier: ^1.60.0
         version: 1.60.0
+      postcss:
+        specifier: ^8.5.14
+        version: 8.5.14
       storybook:
         specifier: ^10.4.0
         version: 10.4.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@testing-library/dom@10.4.1)(@types/react@19.2.14)(prettier@3.8.3)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@4.3.0)
+      tailwindcss-react-aria-components:
+        specifier: ^2.1.0
+        version: 2.1.0(tailwindcss@4.3.0)
       tsup:
         specifier: ^8.5.1
         version: 8.5.1(jiti@2.7.0)(postcss@8.5.14)(typescript@6.0.3)
