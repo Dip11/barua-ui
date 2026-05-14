@@ -7,8 +7,12 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
-  "sideEffects": ["**/*.css"],
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     ".": {
       "import": {
@@ -41,7 +45,8 @@
     "format": "prettier --check \"./src/**/*.{ts,tsx}\"",
     "format:fix": "prettier --write \"./src/**/*.{ts,tsx}\"",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.0",
@@ -73,6 +78,7 @@
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/browser-playwright": "4.1.6",
     "@vitest/coverage-v8": "4.1.6",
+    "chromatic": "^16.10.0",
     "eslint-plugin-storybook": "^10.4.0",
     "jsdom": "^29.1.1",
     "playwright": "^1.60.0",

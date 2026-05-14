@@ -125,6 +125,9 @@ importers:
       '@vitest/coverage-v8':
         specifier: 4.1.6
         version: 4.1.6(@vitest/browser@4.1.6)(vitest@4.1.6)
+      chromatic:
+        specifier: ^16.10.0
+        version: 16.10.0
       eslint-plugin-storybook:
         specifier: ^10.4.0
         version: 10.4.0(eslint@9.39.4(jiti@2.7.0))(storybook@10.4.0(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)(@testing-library/dom@10.4.1)(@types/react@19.2.14)(prettier@3.8.3)(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(typescript@6.0.3)
